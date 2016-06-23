@@ -192,7 +192,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBusinessDay()
+    public function getBusinessDays()
     {
         return $this->hasMany(BusinessDay::className(), ['user_id' => 'id']);
     }
@@ -200,7 +200,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCashTransaction()
+    public function getCashTransactions()
     {
         return $this->hasMany(CashTransaction::className(), ['user_id' => 'id']);
     }
@@ -208,7 +208,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCashTransactionReason()
+    public function getCashTransactionReasons()
     {
         return $this->hasMany(CashTransactionReason::className(), ['user_id' => 'id']);
     }
@@ -216,7 +216,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getGoodsGroup()
+    public function getGoodsGroups()
     {
         return $this->hasMany(GoodsGroup::className(), ['user_id' => 'id']);
     }
@@ -232,7 +232,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProvider()
+    public function getProviders()
     {
         return $this->hasMany(Provider::className(), ['user_id' => 'id']);
     }
