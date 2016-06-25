@@ -15,3 +15,9 @@ What I have done?
    
    sudo chown -R slava:www-data backend/views
    chmod -R 775 backend/views 
+   
+7. Generated CRUD for BusinessDay model.
+8. Generated BusinessDaySearch. php and _search.php.
+9. Regenarated with CRUD BusinessDayController.php, 
+   business-day/_search.php, backend/views/business-day/index.php,
+   common/models/BusinessDaySearch.php.
