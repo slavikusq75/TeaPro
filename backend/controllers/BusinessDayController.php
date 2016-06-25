@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\BusinessDay;
-use yii\data\ActiveDataProvider;
+use common\models\BusinessDaySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,11 +35,11 @@ class BusinessDayController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => BusinessDay::find(),
-        ]);
+        $searchModel = new BusinessDaySearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }

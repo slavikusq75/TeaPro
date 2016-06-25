@@ -61,7 +61,7 @@ class BusinessDaySearch extends BusinessDay
         $query->andFilterWhere([
             'id' => $this->id,
             'begining_balance' => $this->begining_balance,
-            'end_ balance' => $this->end_balance,
+            'end_ balance' => $this->end_ balance,
             'debit' => $this->debit,
             'credit' => $this->credit,
             'created_at' => $this->created_at,
