@@ -32,3 +32,6 @@ What I have done?
 18. Generated CRUD for SellingGoods model.
 19. Generated CRUD for SortsOfGoods model.
 20. Generated CRUD for User model.
+21. Installed Admin LTE component for backend. 
+    Copied yii2-adminlte-asset folder into backend/views.
+    Set up backend/config/main.php.
