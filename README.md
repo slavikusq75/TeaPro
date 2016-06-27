@@ -35,3 +35,5 @@ What I have done?
 21. Installed Admin LTE component for backend. 
     Copied yii2-adminlte-asset folder into backend/views.
     Set up backend/config/main.php.
+22. Added additional rules into User model.
+23. Regenerated backend/views/user/_form.php with CRUD.    
