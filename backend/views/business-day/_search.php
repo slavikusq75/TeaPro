@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'begining_balance') ?>
 
-    <?= $form->field($model, 'end_ balance') ?>
+    <?= $form->field($model, 'end_balance') ?>
 
     <?= $form->field($model, 'debit') ?>
 

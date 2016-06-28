@@ -15,7 +15,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $begining_balance
- * @property string $end_ balance
+ * @property string $end_balance
  * @property string $debit
  * @property string $credit
  * @property integer $created_at
@@ -46,9 +46,9 @@ class BusinessDay extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'begining_balance', 'end_ balance', 'debit', 'credit', 'created_at', 'updated_at', 'selling_goods_id', 'cash_transaction_id', 'user_id', 'departament_id'], 'required'],
+            [['id', 'begining_balance', 'end_balance', 'debit', 'credit', 'created_at', 'updated_at', 'selling_goods_id', 'cash_transaction_id', 'user_id', 'departament_id'], 'required'],
             [['id', 'created_at', 'updated_at', 'selling_goods_id', 'cash_transaction_id', 'user_id', 'departament_id'], 'integer'],
-            [['begining_balance', 'end_ balance', 'debit', 'credit'], 'number'],
+            [['begining_balance', 'end_balance', 'debit', 'credit'], 'number'],
             [['cash_transaction_id'], 'exist', 'skipOnError' => true, 'targetClass' => CashTransaction::className(), 'targetAttribute' => ['cash_transaction_id' => 'id']],
             [['departament_id'], 'exist', 'skipOnError' => true, 'targetClass' => Departament::className(), 'targetAttribute' => ['departament_id' => 'id']],
             [['selling_goods_id'], 'exist', 'skipOnError' => true, 'targetClass' => SellingGoods::className(), 'targetAttribute' => ['selling_goods_id' => 'id']],
@@ -64,7 +64,7 @@ class BusinessDay extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'begining_balance' => 'Begining Balance',
-            'end_ balance' => 'End  Balance',
+            'end_balance' => 'End Balance',
             'debit' => 'Debit',
             'credit' => 'Credit',
             'created_at' => 'Created At',

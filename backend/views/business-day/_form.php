@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'begining_balance')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'end_ balance')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'end_balance')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'debit')->textInput(['maxlength' => true]) ?>
 

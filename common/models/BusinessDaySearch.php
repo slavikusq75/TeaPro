@@ -19,7 +19,7 @@ class BusinessDaySearch extends BusinessDay
     {
         return [
             [['id', 'created_at', 'updated_at', 'selling_goods_id', 'cash_transaction_id', 'user_id', 'departament_id'], 'integer'],
-            [['begining_balance', 'end_ balance', 'debit', 'credit'], 'number'],
+            [['begining_balance', 'end_balance', 'debit', 'credit'], 'number'],
         ];
     }
 
@@ -61,7 +61,7 @@ class BusinessDaySearch extends BusinessDay
         $query->andFilterWhere([
             'id' => $this->id,
             'begining_balance' => $this->begining_balance,
-            'end_ balance' => $this->end_balance,
+            'end_balance' => $this->end_balance,
             'debit' => $this->debit,
             'credit' => $this->credit,
             'created_at' => $this->created_at,

@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'begining_balance',
-            'end_ balance',
+            'end_balance',
             'debit',
             'credit',
             // 'created_at',
