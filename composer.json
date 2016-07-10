@@ -22,7 +22,8 @@
         "kartik-v/yii2-krajee-base": "^1.8",
         "kartik-v/yii2-widget-activeform": "^1.4",
         "kartik-v/yii2-grid": "^3.1",
-        "kartik-v/yii2-builder": "^1.6"
+        "kartik-v/yii2-builder": "^1.6",
+        "wbraganca/yii2-dynamicform": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
