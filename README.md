@@ -36,4 +36,7 @@ What I have done?
     Copied yii2-adminlte-asset folder into backend/views.
     Set up backend/config/main.php.
 22. Added additional rules into User model.
-23. Regenerated backend/views/user/_form.php with CRUD.    
+23. Regenerated backend/views/user/_form.php with CRUD.
+24. Installed kartik form builder with composer. 
+25. Installed dynamic form with composer.   
+26. Added new column (measure_id) in sorts_of_goods table. 
