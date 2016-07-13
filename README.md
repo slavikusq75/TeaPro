@@ -41,3 +41,5 @@ What I have done?
 25. Installed dynamic form with composer.   
 26. Added new column (measure_id) in sorts_of_goods table. 
 27. Added AUTO_INCREMENT for id field in measure table.
+28. Added Measures_SortsOfGoods relations in Measures and SortsOfGoods models.
+
