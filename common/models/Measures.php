@@ -74,4 +74,12 @@ class Measures extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSortsOfGoods()
+    {
+        return $this->hasMany(SortsOfGoods::className(), ['measures_id' => 'id']);
+    }
 }
