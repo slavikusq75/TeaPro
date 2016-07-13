@@ -9,6 +9,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "measures".
@@ -30,6 +31,16 @@ class Measures extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'measures';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
     }
 
     /**
