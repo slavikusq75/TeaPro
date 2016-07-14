@@ -42,4 +42,5 @@ What I have done?
 26. Added new column (measure_id) in sorts_of_goods table. 
 27. Added AUTO_INCREMENT for id field in measure table.
 28. Added Measures_SortsOfGoods relations in Measures and SortsOfGoods models.
+29. Added BlameableBehavior for setting current user id in measures table when new sign is creating or updating.
 
