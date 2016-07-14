@@ -10,6 +10,7 @@ namespace common\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use yii\behaviors\BlameableBehavior;
 
 /**
  * This is the model class for table "measures".
@@ -40,6 +41,13 @@ class Measures extends \yii\db\ActiveRecord
     {
         return [
             TimestampBehavior::className(),
+
+            [
+                'class' => BlameableBehavior::className(),
+                'createdByAttribute' => 'user_id',
+                'updatedByAttribute' => 'user_id',
+
+            ],
         ];
     }
 
