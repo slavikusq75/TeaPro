@@ -57,7 +57,7 @@ class Measures extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'measure', 'user_id', 'created_at', 'updated_at'], 'required'],
+            [[/*'id', */'measure'/*, 'user_id', 'created_at', 'updated_at'*/], 'required'],
             [['id', 'user_id', 'created_at', 'updated_at'], 'integer'],
             [['measure'], 'string', 'max' => 45],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
