@@ -9,6 +9,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\behaviors\BlameableBehavior;
 
 /**
  * This is the model class for table "sorts_of_goods".
@@ -36,6 +38,23 @@ class SortsOfGoods extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'sorts_of_goods';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+
+            [
+                'class' => BlameableBehavior::className(),
+                'createdByAttribute' => 'user_id',
+                'updatedByAttribute' => 'user_id',
+
+            ],
+        ];
     }
 
     /**
