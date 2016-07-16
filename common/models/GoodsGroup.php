@@ -59,7 +59,7 @@ class GoodsGroup extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'name', 'measures_id', 'created_at', 'updated_at', 'user_id'], 'required'],
+            [[/*'id', */'name', 'measures_id'/*, 'created_at', 'updated_at', 'user_id'*/], 'required'],
             [['id', 'measures_id', 'created_at', 'updated_at', 'user_id'], 'integer'],
             [['name'], 'string', 'max' => 255],
             [['name'], 'unique'],
