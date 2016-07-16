@@ -43,4 +43,10 @@ What I have done?
 27. Added AUTO_INCREMENT for id field in measure table.
 28. Added Measures_SortsOfGoods relations in Measures and SortsOfGoods models.
 29. Added BlameableBehavior for setting current user id in measures table when new sign is creating or updating.
+30. Commented required section in public function rules (excluding measure required) in Measure model.
+31. Changed textInput fields to hiddenInput fields in backend/views/measures/_form.php.
+32. Added TimestampBehavior and BlameableBehavior to GoodsGroup model.
+33. Commented required section in public function rules (excluding name and measures_id) in GoodsGroup model.
+34. Added TimestampBehavior and BlameableBehavior in SortsOfGoods model.
+
 
