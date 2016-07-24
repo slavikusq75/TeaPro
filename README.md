@@ -1,54 +1,54 @@
-Yii 2 Advanced Project Template
-===============================
+What I have done?
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+1.  Created TeaProject DB diagram in MySQL Workbanch.
+2.  Exported teaproject.skl from MySQL Workbanch to phpMyAdmin and 
+    created teaproject DB.
+3.  Generated models from tables in Gii.
+4.  Used built-in migration which generated user table.
+5.  Modified User model and user table with to additional columns-
+    firstname, lastname.
+6.  Changed permissions for common/models, backend/models,
+    backend/controllers, frontend/views backend/models, 
+    frontend/controllers, frontend/views folders. Gave rights for 
+    www-data group to wright generated files (via Gii and CRUD) to these 
+    folders. For example:
+   
+    sudo chown -R slava:www-data backend/views
+    chmod -R 775 backend/views 
+   
+7.  Generated CRUD for BusinessDay model.
+8.  Generated BusinessDaySearch. php and _search.php.
+9.  Regenarated with CRUD BusinessDayController.php, 
+    business-day/_search.php, backend/views/business-day/index.php,
+    common/models/BusinessDaySearch.php.
+10. Generated CRUD for CashTransaction model.
+11. Generated CRUD for CashTransactionReason model.
+12. Generated CRUD for Departament model.
+13. Generated CRUD for GoodsGroup model.
+14. Generated CRUD for Measures model.
+15. Generated CRUD for PriceOfGoods model.
+16. Generated CRUD for Provider model.
+17. Generated CRUD for ReceivingGoods model.
+18. Generated CRUD for SellingGoods model.
+19. Generated CRUD for SortsOfGoods model.
+20. Generated CRUD for User model.
+21. Installed Admin LTE component for backend. 
+    Copied yii2-adminlte-asset folder into backend/views.
+    Set up backend/config/main.php.
+22. Added additional rules into User model.
+23. Regenerated backend/views/user/_form.php with CRUD.
+24. Installed kartik form builder with composer. 
+25. Installed dynamic form with composer.   
+26. Added new column (measure_id) in sorts_of_goods table. 
+27. Added AUTO_INCREMENT for id field in measure table.
+28. Added Measures_SortsOfGoods relations in Measures and SortsOfGoods models.
+29. Added BlameableBehavior for setting current user id in measures table when new sign is creating or updating.
+30. Commented required section in public function rules (excluding measure required) in Measure model.
+31. Changed textInput fields to hiddenInput fields in backend/views/measures/_form.php.
+32. Added TimestampBehavior and BlameableBehavior to GoodsGroup model.
+33. Commented required section in public function rules (excluding name and measures_id) in GoodsGroup model.
+34. Added TimestampBehavior and BlameableBehavior in SortsOfGoods model.
+35. Deleted measure_id column from goods_group table.
+36. Added user_id foreign keys for all tables (excluding user and migration tables).
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
-
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
-
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
-
-DIRECTORY STRUCTURE
--------------------
-
-```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-tests                    contains various tests for the advanced application
-    codeception/         contains tests developed with Codeception PHP Testing Framework
-```
