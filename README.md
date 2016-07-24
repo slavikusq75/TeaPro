@@ -49,5 +49,6 @@ What I have done?
 33. Commented required section in public function rules (excluding name and measures_id) in GoodsGroup model.
 34. Added TimestampBehavior and BlameableBehavior in SortsOfGoods model.
 35. Deleted measure_id column from goods_group table.
+36. Added user_id foreign keys for all tables (excluding user and migration tables).
 
 
