@@ -48,5 +48,6 @@ What I have done?
 32. Added TimestampBehavior and BlameableBehavior to GoodsGroup model.
 33. Commented required section in public function rules (excluding name and measures_id) in GoodsGroup model.
 34. Added TimestampBehavior and BlameableBehavior in SortsOfGoods model.
+35. Deleted measure_id column from goods_group table.
 
 
